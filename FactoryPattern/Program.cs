@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Enter the number of wheels to build a motorized vehicle: ");
+            int userWheels = int.Parse(Console.ReadLine());
+
+            IVehicle vehicle = VehicleFactory.GetVehicle(userWheels);
+            vehicle.Drive();
+
         }
     }
 }
